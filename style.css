@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.game-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.word-box {
+    font-size: 40px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.keyboard {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.letter-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+.letter-btn:hover:not(:disabled) {
+    background-color: #bbb;
+}
+
+.letter-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.letter-btn.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.letter-btn.wrong {
+    background-color: #f44336;
+    color: white;
+}
+
+#lives {
+    font-size: 20px;
+    color: #333;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
