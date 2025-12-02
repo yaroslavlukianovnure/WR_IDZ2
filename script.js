@@ -12,6 +12,7 @@ const keyboardDiv = document.getElementById("keyboard");
 const livesDiv = document.getElementById("lives");
 const messageDiv = document.getElementById("message");
 const restartBtn = document.getElementById("restartBtn");
+const hangmanImg = document.getElementById("hangmanImg");
 
 function initGame() {
     selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -25,6 +26,7 @@ function initGame() {
     updateWordDisplay();
     updateLives();
     createKeyboard();
+    updateHangmanImage();
 }
 
 function updateWordDisplay() {
@@ -66,12 +68,20 @@ function handleGuess(letter, btnElement) {
         attempts--;
         updateLives();
         
+        updateHangmanImage();
+        
         if (attempts === 0) endGame(false);
     }
 }
 
 function updateLives() {
     livesDiv.textContent = `Залишилось спроб: ${attempts}`;
+}
+
+function updateHangmanImage() {
+    const errors = 6 - attempts;
+    hangmanImg.src = `images/${errors}.png`;
+
 }
 
 function endGame(isWin) {

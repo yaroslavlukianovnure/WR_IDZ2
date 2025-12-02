@@ -3,6 +3,10 @@ body {
     background-color: #f0f0f0;
     text-align: center;
     padding-top: 50px;
+    min-height: 100vh;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
 }
 
 .game-container {
@@ -12,6 +16,20 @@ body {
     display: inline-block;
     max-width: 600px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    max-width: 600px;
+    width: 90%;
+}
+
+.image-box img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
 }
 
 .word-box {
@@ -28,6 +46,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
+    max-width: 500px;
 }
 
 .letter-btn {
